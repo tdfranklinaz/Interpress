@@ -1,0 +1,12 @@
+{
+  "require": {
+    "wp-cli/wp-cli-bundle": "*"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "[[ -f /usr/bin/wp ]] || sudo ln -s /home/polarnix/Git/rapidstrat/rapidpress/rpro-theme/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp",
+      "[[ -f ~/.bash_profile ]] || touch ~/.bash_profile",
+        "source ~/.bash_profile"
+    ]
+  }
+}

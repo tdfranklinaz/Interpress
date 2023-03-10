@@ -1,0 +1,30 @@
+{
+  "name": "rpro-theme",
+  "version": "1.0.0",
+  "description": "",
+  "author": "rapidstrat",
+  "license": "MIT",
+  "scripts": {
+    "dev": "clear && echo 'IF9fX19fICAgICAgIF8gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKfF8gICBffCAgICAgfCB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICB8IHwgIF8gX18gfCB8XyBfX18gXyBfXyBfIF9fICBfIF9fIF9fXyAgX19fIF9fXyAKICB8IHwgfCAnXyBcfCBfXy8gXyBcICdfX3wgJ18gXHwgJ19fLyBfIFwvIF9fLyBfX3wKIF98IHxffCB8IHwgfCB8fCAgX18vIHwgIHwgfF8pIHwgfCB8ICBfXy9cX18gXF9fIFwKfF9fX19ffF98IHxffFxfX1xfX198X3wgIHwgLl9fL3xffCAgXF9fX3x8X19fL19fXy8KICAgICAgICAgICAgICAgICAgICAgICAgIHwgfCAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgIHxffCAgICAgICAgICAgICAgICAgICAgICA=' | base64 --decode && echo '\n' && npx rollup -c -w"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "alpinejs": "^3.12.0",
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^2.51.3",
+    "postcss": "^8.4.16",
+    "rollup": "^3.19.1",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.1.8"
+  },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "@iconify/iconify": "^3.1.0"
+  }
+}
