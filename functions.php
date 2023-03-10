@@ -67,32 +67,20 @@ add_action('after_setup_theme', 'rapidpress_setup');
 function rapidpress_scripts() {
 	// css
 	wp_enqueue_style(
-    'rapidpress-style',
-    get_stylesheet_directory_uri() . '/style.css',
-    array(),
-    '1.0.0'
-  );
+		'rapidpress-style',
+		get_stylesheet_directory_uri() . '/style.css',
+		array(),
+		'1.0.0'
+	);
 
 	// scripts
 	wp_enqueue_script( 
-		'rapidpress-scripts',
+		'interpress-scripts',
 		get_template_directory_uri() . '/.interpress/build/script.js',
 		array(),
 		'1.0.0',
 		true
 	);
-
-  // gulp livereload
-  if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-    wp_register_script(
-      'livereload', 
-      'http://localhost:35729/livereload.js?snipver=1', 
-      null, 
-      false, 
-      true
-    );
-    wp_enqueue_script('livereload');
-  }
 
 	// remove block editor css libraries
 	wp_dequeue_style('wp-block-library');
