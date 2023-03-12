@@ -3,15 +3,15 @@
  * Plugins
  */
 
-if ( ! defined( 'RP_VERSION' ) ) {
+if ( ! defined('RP_VERSION') ) {
 	// Replace the version number of the theme on each release.
-	define( 'RP_VERSION', '1.0.0' );
+	define('RP_VERSION', '1.0.0');
 }
 
 /**
  * theme setup
  */
-function rapidpress_setup() {
+function interpress_setup() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support(
@@ -30,7 +30,7 @@ function rapidpress_setup() {
   // register menus
   register_nav_menus(
     array(
-      'main' => esc_html__('Primary', 'rapidpress')
+      'main' => esc_html__('Primary', 'interpress')
     )
   );
 
@@ -59,15 +59,15 @@ function rapidpress_setup() {
     acf_add_options_page();
   }
 }
-add_action('after_setup_theme', 'rapidpress_setup');
+add_action('after_setup_theme', 'interpress_setup');
 
 /**
  * enqueue scripts and styles.
  */
-function rapidpress_scripts() {
+function interpress_scripts() {
 	// css
 	wp_enqueue_style(
-		'rapidpress-style',
+		'interpress-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array(),
 		'1.0.0'
@@ -87,7 +87,7 @@ function rapidpress_scripts() {
 	wp_dequeue_style('wp-block-library-theme');
 	wp_dequeue_style('wc-blocks-style'); // woocommerce block css
 }
-add_action( 'wp_enqueue_scripts', 'rapidpress_scripts' );
+add_action( 'wp_enqueue_scripts', 'interpress_scripts' );
 
 /**
  * modify user fields in admin
